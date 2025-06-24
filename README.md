@@ -18,4 +18,4 @@ JavaScript – for logic and functionality, including class-based structure with
 
 This project is deployed on GitHub Pages:
 
-- https://github.com/juliocoraspe/se_project_todo-app.git
+- https://juliocoraspe.github.io/se_project_todo-app/

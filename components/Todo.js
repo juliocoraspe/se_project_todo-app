@@ -5,12 +5,12 @@ class Todo {
     this._templateElement = document.querySelector(selector);
     this._name = data.name;
     this._handleCheck = handleCheck;
-    this._handDelete = handleDelete;
+    this._handleDelete = handleDelete;
   }
 
   _setEventListeners() {
     this._todoDeleteBtn.addEventListener("click", () => {
-      this._handDelete(this._completed);
+      this._handleDelete(this._completed);
       this._remove();
     });
 
@@ -38,7 +38,7 @@ class Todo {
     this._element = null;
   };
 
-  _generateDueDataEl(dueDate) {
+  _generateDueDateEl(dueDate) {
     if (!isNaN(dueDate)) {
       this._todoDate.textContent = `Due: ${dueDate.toLocaleString("en-US", {
         year: "numeric",
@@ -62,7 +62,7 @@ class Todo {
 
     this._generateCheckboxEl();
     this._setEventListeners();
-    this._generateDueDataEl(this._data.date);
+    this._generateDueDateEl(this._data.date);
 
     return this._todoElement;
   }
